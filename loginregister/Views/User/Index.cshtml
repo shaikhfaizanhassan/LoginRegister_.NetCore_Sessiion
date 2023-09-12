@@ -1,0 +1,24 @@
+﻿
+@model loginregister.Models.usertb
+
+
+
+
+    <form method="post" asp-action="login">
+
+    
+    <label>Email</label>
+    <input type="text" asp-for="email" />
+    <label>Password</label>
+    <input type="password" asp-for="password" />
+    <input type="submit" value="Login" />
+
+    </form> 
+
+   
+@if (TempData["errormessage"] != null)
+{
+    <h1>@TempData["errormessage"]</h1>
+}
+   
+
